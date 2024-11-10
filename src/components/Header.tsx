@@ -4,6 +4,7 @@ const Header = () =>{
 return(
     <header className="header">
         <h1><img src={logo} alt="" /> YA BAO</h1>
+        <sub>Дух китайской еды</sub>
         <nav>
         <a href="/">Паста</a>
         <a href="/">Супы</a>
