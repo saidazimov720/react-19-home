@@ -1,25 +1,24 @@
-import React from "react";
-import logo from  '../assets/icons/Logo.png';
-const Header = () =>{
-return(
-    <header className="header">
-        <h1><img src={logo} alt="" /> YA BAO</h1>
-        <sub>Дух китайской еды</sub>
-        <nav>
-        <a href="/">Паста</a>
-        <a href="/">Супы</a>
-        <a href="/">Салаты</a>
-        <a href="/">Антипасти</a>
-        <a href="/">Напитки</a>
-        <a href="/">Десерты</a>
-        <a href="/">Бакалея</a>
-        <a href="/">Акции</a>
-        <a href="/">Комбо</a>
-        <a href="/">Контакты</a>
-        <a href="/bonuses">Бонусы</a>
-        <a href="/basket">Корзина</a>
-        </nav>
-    </header>
-);
+import React from 'react';
+import { AppBar, Toolbar, Typography, IconButton, Box, Badge } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+const Header: React.FC = () => {
+  return (
+    <AppBar position="static" color="default">
+      <Toolbar>
+        <Typography variant="h6" color="primary" sx={{ flexGrow: 1 }}>
+          Ya Bao
+        </Typography>
+        <Box>
+          <IconButton color="primary">
+            <Badge badgeContent={1} color="secondary">
+              <ShoppingCartIcon />
+            </Badge>
+          </IconButton>
+        </Box>
+      </Toolbar>
+    </AppBar>
+  );
 };
+
 export default Header;
