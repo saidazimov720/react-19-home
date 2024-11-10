@@ -1,13 +1,18 @@
 import React from 'react';
-import logo from "../assets/icons/Logo.png"
+import { Box, Typography, Link } from '@mui/material';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer">
-        <h1><img src={logo} alt="" />YA BAO</h1>
-        <sub>Дух китайской еды</sub>
-      <p> Все права защищены © 2021</p>
-    </footer>
+    <Box sx={{ py: 4, textAlign: 'center', borderTop: 1, borderColor: 'divider' }}>
+      <Typography variant="body2" color="textSecondary">
+        Ya Bao © 2021
+      </Typography>
+      <Box mt={2}>
+        <Link href="#" underline="hover" color="primary">YouTube</Link> |{' '}
+        <Link href="#" underline="hover" color="primary">Facebook</Link> |{' '}
+        <Link href="#" underline="hover" color="primary">Instagram</Link>
+      </Box>
+    </Box>
   );
 };
 
