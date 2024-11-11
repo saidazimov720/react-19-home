@@ -10,7 +10,6 @@ const BonusesPage: React.FC = () => {
             <Box>
                 <Typography variant="body1">🎉 100 бонусов за первый заказ!</Typography>
                 <Typography variant="body1">🎉 Скидка 10% при заказе на сумму от 500 ₽!</Typography>
-                {/* Add more bonus details here */}
             </Box>
         </Container>
     );
