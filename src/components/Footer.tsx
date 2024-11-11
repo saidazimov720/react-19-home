@@ -9,6 +9,7 @@ import CallIcon from '@mui/icons-material/PhoneInTalk';
 import visa from '../assets/icons/visa.png';
 import paypal from '../assets/icons/paypall.png';
 import masterCard from '../assets/icons/mastercard.png';
+import shurva from '../assets/images/shurva.png'
 
 const useStyles = makeStyles({
     footerContainer: {
@@ -61,7 +62,6 @@ const Footer: React.FC = () => {
                     </Box>
                 </Grid>
 
-                {/* Contact Info */}
                 <Grid item xs={12} md={4}>
                     <Typography variant="h6">Остались вопросы? Мы всегда на связи:</Typography>
                     <Box className={classes.iconsContainer}>
@@ -93,6 +93,9 @@ const Footer: React.FC = () => {
                         <img src={masterCard} alt="MasterCard" style={{ height: '24px' }} />
                     </Box>
                 </Grid>
+            </Grid>
+            <Grid justifyContent={'right'}>
+                <img src={shurva} alt="" />
             </Grid>
 
 
