@@ -13,7 +13,7 @@ interface CartItem {
     description: string;
     price: number;
     quantity: number;
-    image: any;
+    image: string;
 }
 
 const Basket: React.FC = () => {
@@ -24,7 +24,7 @@ const Basket: React.FC = () => {
             description: 'Домашняя паста феттучини, сливочный соус, креветки, трюфельное масло, черный перец, пармезан 350 г',
             price: 120,
             quantity: 1,
-            image: {pizza},
+            image: `${pizza}`,
         },
         {
             id: 2,
@@ -32,7 +32,7 @@ const Basket: React.FC = () => {
             description: 'Домашняя паста феттучини, сливочный соус, креветки, трюфельное масло, черный перец, пармезан 350 г',
             price: 120,
             quantity: 1,
-            image: {combo},
+            image: `${combo}`,
         },
     ]);
 
