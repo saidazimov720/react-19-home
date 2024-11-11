@@ -47,7 +47,6 @@ const MyBonusesPage = () => {
                 <Typography variant="h6" component="h2">
                     Личные данные
                 </Typography>
-
                 <Box sx={{ mb: 2 }}>
                     <TextField
                         label="Имя"
