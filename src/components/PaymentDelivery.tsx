@@ -40,7 +40,7 @@ const PaymentAndDelivery: React.FC = () => {
                 Оплата и доставка
             </Typography>
             
-            {/* Info Cards */}
+
             <Grid container spacing={2} justifyContent="center">
                 {infoCards.map((card, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
