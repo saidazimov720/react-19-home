@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import ProductSection from '../components/ProductSEction';
 import PromotionsSection from '../components/PromotionSection';
-import LocationInfo from '../components/LocationInfo';
 import PaymentAndDelivery from '../components/PaymentDelivery';
 
 const MainPage: React.FC = () => {
@@ -27,7 +26,6 @@ const MainPage: React.FC = () => {
                 <Typography variant="h3" color="primary" gutterBottom>
                 <PaymentAndDelivery />
                 </Typography>
-                <LocationInfo />
             </Container>
         </Box>
     );
