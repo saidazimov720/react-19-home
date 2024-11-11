@@ -6,6 +6,15 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import combo from '../assets/images/kombo.png';
 import pizza from '../assets/images/korzinka_pizzasi.png';
+import pizza2 from '../assets/images/pizza.png';
+import sous from '../assets/images/sous.png';
+import sous2 from '../assets/images/sous2.png'
+import sous3 from '../assets/images/sous3.png'
+import sous4 from '../assets/images/sous4.png'
+import sous5 from '../assets/images/sous5.png'
+import sous6 from '../assets/images/sous6.png'
+import combo2 from '../assets/images/combo2.png';
+
 
 interface CartItem {
     id: number;
@@ -89,14 +98,12 @@ const Basket: React.FC = () => {
 
             <Divider sx={{ my: 4 }} />
 
-            {/* Add More Products Section */}
             <Typography variant="h6" gutterBottom>Добавить к заказу?</Typography>
             <Grid container spacing={2}>
-                {/* Map over suggestions here */}
                 {[1, 2, 3].map((suggestion) => (
                     <Grid item xs={4} key={suggestion}>
                         <Card sx={{ padding: 2, textAlign: 'center' }}>
-                            <img src="path-to-suggestion-image" alt="Suggested Item" width="50" />
+                            <img src={suggestion === 1 ? combo2 : suggestion === 2 ? pizza :  pizza2} alt="Suggested Item" width="50" />
                             <Typography variant="body2">Пример продукта</Typography>
                             <Typography variant="body2" color="primary">от 120 Р</Typography>
                         </Card>
@@ -104,13 +111,12 @@ const Basket: React.FC = () => {
                 ))}
             </Grid>
 
-            {/* Sauces and Snacks Section */}
             <Typography variant="h6" gutterBottom sx={{ mt: 4 }}>Соусы к бортикам и закускам</Typography>
             <Grid container spacing={2}>
-                {[1, 2, 3, 4, 5, 6].map((sauce) => (
-                    <Grid item xs={4} sm={2} key={sauce}>
+                {[1, 2, 3, 4, 5, 6].map((suggestion) => (
+                    <Grid item xs={4} sm={2} key={suggestion}>
                         <Card sx={{ padding: 2, textAlign: 'center' }}>
-                            <img src="path-to-sauce-image" alt="Sauce" width="50" />
+                            <img src={suggestion === 1 ? sous : suggestion === 2 ? sous2 :  suggestion === 3 ? sous3 : suggestion === 4 ? sous4 : suggestion === 5 ? sous5 : sous6} alt="Sauce" width="50" />
                             <Typography variant="body2">Сырный соус</Typography>
                             <Typography variant="body2" color="primary">от 120 Р</Typography>
                         </Card>
