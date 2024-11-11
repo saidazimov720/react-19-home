@@ -104,7 +104,7 @@ const Basket: React.FC = () => {
                     <Grid item xs={4} key={suggestion}>
                         <Card sx={{ padding: 2, textAlign: 'center' }}>
                             <img src={suggestion === 1 ? combo2 : suggestion === 2 ? pizza :  pizza2} alt="Suggested Item" width="50" />
-                            <Typography variant="body2">Пример продукта</Typography>
+                            <Typography variant="body2">Молочный коктель с приятным аро...</Typography>
                             <Typography variant="body2" color="primary">от 120 Р</Typography>
                         </Card>
                     </Grid>
@@ -117,7 +117,7 @@ const Basket: React.FC = () => {
                     <Grid item xs={4} sm={2} key={suggestion}>
                         <Card sx={{ padding: 2, textAlign: 'center' }}>
                             <img src={suggestion === 1 ? sous : suggestion === 2 ? sous2 :  suggestion === 3 ? sous3 : suggestion === 4 ? sous4 : suggestion === 5 ? sous5 : sous6} alt="Sauce" width="50" />
-                            <Typography variant="body2">Сырный соус</Typography>
+                            <Typography variant="body2">{cartItems[suggestion - 1]? "Сырный соус": suggestion - 2 ? "Барбекю" : suggestion - 3 ? "Ранч" : suggestion - 4 ? "Сгущёнка" : suggestion - 5 ? "Малиновое варенье" : "Сырный соус}"}</Typography>
                             <Typography variant="body2" color="primary">от 120 Р</Typography>
                         </Card>
                     </Grid>
