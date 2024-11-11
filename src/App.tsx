@@ -1,16 +1,35 @@
 import React from 'react';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme/theme';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import AppRoutes from './routes/AppRoutes';
 import Header from './components/Header';
-import BasketPage from './pages/BasketPage';
+import Footer from './components/Footer';
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <Header />
-      <BasketPage />
-    </ThemeProvider>
-  );
-}
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#ff4081', 
+        },
+        secondary: {
+            main: '#333333', 
+        },
+    },
+    typography: {
+        fontFamily: 'Roboto, Arial, sans-serif', 
+    },
+});
+
+const App: React.FC = () => {
+    return (
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Router>
+                <Header /> 
+                <AppRoutes />
+                <Footer />
+            </Router>
+        </ThemeProvider>
+    );
+};
 
 export default App;
